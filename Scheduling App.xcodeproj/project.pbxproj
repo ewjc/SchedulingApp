@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		0985636424B8F36B003AE0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985636324B8F36B003AE0B9 /* AppDelegate.swift */; };
 		0985636624B8F36B003AE0B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985636524B8F36B003AE0B9 /* SceneDelegate.swift */; };
-		0985636824B8F36B003AE0B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985636724B8F36B003AE0B9 /* ContentView.swift */; };
+		0985636824B8F36B003AE0B9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985636724B8F36B003AE0B9 /* WelcomeView.swift */; };
 		0985636A24B8F36E003AE0B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0985636924B8F36E003AE0B9 /* Assets.xcassets */; };
 		0985636D24B8F36E003AE0B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0985636C24B8F36E003AE0B9 /* Preview Assets.xcassets */; };
 		0985637024B8F36E003AE0B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0985636E24B8F36E003AE0B9 /* LaunchScreen.storyboard */; };
+		0985637824B8FC1F003AE0B9 /* SelectTeamAndPoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985637724B8FC1F003AE0B9 /* SelectTeamAndPoolView.swift */; };
+		0985637A24B8FE14003AE0B9 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985637924B8FE14003AE0B9 /* ButtonView.swift */; };
+		0985637C24B903E7003AE0B9 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985637B24B903E7003AE0B9 /* ViewModifiers.swift */; };
+		0985638224B91F71003AE0B9 /* ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638124B91F71003AE0B9 /* ErrorTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0985636024B8F36B003AE0B9 /* Scheduling App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scheduling App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0985636324B8F36B003AE0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0985636524B8F36B003AE0B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0985636724B8F36B003AE0B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0985636724B8F36B003AE0B9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		0985636924B8F36E003AE0B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0985636C24B8F36E003AE0B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0985636F24B8F36E003AE0B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0985637124B8F36E003AE0B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0985637724B8FC1F003AE0B9 /* SelectTeamAndPoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamAndPoolView.swift; sourceTree = "<group>"; };
+		0985637924B8FE14003AE0B9 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		0985637B24B903E7003AE0B9 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		0985638124B91F71003AE0B9 /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +64,16 @@
 		0985636224B8F36B003AE0B9 /* Scheduling App */ = {
 			isa = PBXGroup;
 			children = (
+				0985637E24B9163F003AE0B9 /* Model */,
+				0985637D24B9163A003AE0B9 /* View */,
+				0985637F24B91644003AE0B9 /* ViewModel */,
 				0985636324B8F36B003AE0B9 /* AppDelegate.swift */,
 				0985636524B8F36B003AE0B9 /* SceneDelegate.swift */,
-				0985636724B8F36B003AE0B9 /* ContentView.swift */,
 				0985636924B8F36E003AE0B9 /* Assets.xcassets */,
 				0985636E24B8F36E003AE0B9 /* LaunchScreen.storyboard */,
 				0985637124B8F36E003AE0B9 /* Info.plist */,
 				0985636B24B8F36E003AE0B9 /* Preview Content */,
+				0985637924B8FE14003AE0B9 /* ButtonView.swift */,
 			);
 			path = "Scheduling App";
 			sourceTree = "<group>";
@@ -73,6 +84,39 @@
 				0985636C24B8F36E003AE0B9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0985637D24B9163A003AE0B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0985638024B91653003AE0B9 /* ViewModifiers */,
+				0985636724B8F36B003AE0B9 /* WelcomeView.swift */,
+				0985637724B8FC1F003AE0B9 /* SelectTeamAndPoolView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0985637E24B9163F003AE0B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0985637F24B91644003AE0B9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0985638024B91653003AE0B9 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				0985637B24B903E7003AE0B9 /* ViewModifiers.swift */,
+				0985638124B91F71003AE0B9 /* ErrorTextField.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0985636424B8F36B003AE0B9 /* AppDelegate.swift in Sources */,
+				0985637824B8FC1F003AE0B9 /* SelectTeamAndPoolView.swift in Sources */,
+				0985638224B91F71003AE0B9 /* ErrorTextField.swift in Sources */,
+				0985637A24B8FE14003AE0B9 /* ButtonView.swift in Sources */,
+				0985637C24B903E7003AE0B9 /* ViewModifiers.swift in Sources */,
 				0985636624B8F36B003AE0B9 /* SceneDelegate.swift in Sources */,
-				0985636824B8F36B003AE0B9 /* ContentView.swift in Sources */,
+				0985636824B8F36B003AE0B9 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
