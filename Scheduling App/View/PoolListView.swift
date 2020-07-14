@@ -8,33 +8,25 @@
 
 import SwiftUI
 
-struct TeamListView: View {
-    
-    let pools: [PoolViewModel]
-    
-    
-    var body: some View {
-        EmptyView()
-    }
-}
-
 struct PoolListView: View {
     
     @EnvironmentObject var appData: AppData
-
+//    @ObservedObject private var poolTeamListVM: PoolTeamListViewModel
+    @State var showingAddTeamView = false
     @State var numberOfTeamSpots = 0
-    @State var poolsAvailable = [String]()
+    @State var pools = [Int]()
     @State var isExpanded = [false, false ,false, false, false]
     
-    var section = ["pool a", "pool b", "pool c", "pool d"]
     var teams = ["gold", "blue", "red"]
     
     var body: some View {
         
         VStack {
             List {
-                ForEach(appData.pools.indices) { index in
-                    Section(header: Text("Pool: \(index)")) {
+                ForEach(pools.indices) { index in
+                    Section(header: Text("Pool \(index + 1)")
+                        .font(Font.system(size: 20, weight: .bold, design: .default))
+                        .padding()) {
                         if self.isExpanded[index] {
                             ForEach(self.teams.indices) { index in
                                 Text("\(self.teams[index])")
@@ -51,10 +43,28 @@ struct PoolListView: View {
                     }
                 }
             }
-        }.navigationBarTitle("Make Team")
-            .onAppear {
-                print("this is the total pools: \(self.$appData.totalPools.wrappedValue)")
-        }
+            
+            NavigationLink(destination: ScheduleView()) {
+                Text("Schedule")
+                    .modifier(ButtonText())
+                    .padding()
+            }
+        }.navigationBarTitle("Pools & Teams")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showingAddTeamView.toggle()
+                }) {
+                    Text("Add Team")
+                }.sheet(isPresented: $showingAddTeamView) {
+                    AddTeamView()
+                }
+                .onAppear(perform: {
+                    guard let totalPools = Int(self.$appData.totalPools.wrappedValue) else { return }
+                    
+                    self.pools = Array(repeating: 0, count: totalPools)
+                    self.isExpanded = Array(repeating: false, count: totalPools)
+                })
+        )
     }
 }
 

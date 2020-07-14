@@ -36,6 +36,14 @@ struct ButtonText: ViewModifier {
     }
 }
 
+struct SimpleButton: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(Font.system(size: 18, weight: .regular, design: .default))
+            .accentColor(.blue)
+    }
+}
+
 
 // Dismiss Keyboard w/ View extension
 

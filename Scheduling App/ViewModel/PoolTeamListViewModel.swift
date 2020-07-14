@@ -8,36 +8,22 @@
 
 import Foundation
 
-class PoolTeamListViewModel {
+class PoolTeamListViewModel: ObservableObject {
     
-    var totalPoolsAmount: Int
-    var totalTeamsAmount: Int
-    var pools = [Int : [TeamViewModel]?]()
+    var totalPoolsAmount: String
+    var totalTeamsAmount: String
+    var pools = [[TeamViewModel]?]()
     
-    init(totalTeamsAmount: Int, totalPoolsAmount: Int) {
+    init(totalTeamsAmount: String, totalPoolsAmount: String) {
         self.totalTeamsAmount = totalTeamsAmount
         self.totalPoolsAmount = totalPoolsAmount
-        
-        setupPools(numberOfPools: totalPoolsAmount)
     }
     
-    func setupPools(numberOfPools: Int) {
-        for index in 1...numberOfPools {
-            pools[index] = nil
+    func setupPools(numberOfPools: String) {
+        if let numberOfPoolsAsInt = Int(numberOfPools) {
+            for index in 0...numberOfPoolsAsInt {
+                pools[index] = nil
+            }
         }
-    }
-}
-
-class PoolViewModel: Identifiable {
-    
-    let id = UUID()
-    var pool: Pool
-    
-    init(pool: Pool) {
-        self.pool = pool
-    }
-    
-    var poolNumber: Int {
-        return pool.poolNumber
     }
 }

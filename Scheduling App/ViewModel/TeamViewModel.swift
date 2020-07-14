@@ -11,14 +11,15 @@ import Foundation
 class TeamViewModel: Identifiable {
     
     let id = UUID()
-    var team: Team
+    var team: Team?
     
-    init(team: Team) {
-        self.team = team
+    init(team: Team?) {
+        self.team = nil
     }
     
-    var teamName: String {
-        return team.name
+    var teamName: String? {
+        guard let teamName = team?.name else { return nil }
+        return teamName
     }
 }
 
