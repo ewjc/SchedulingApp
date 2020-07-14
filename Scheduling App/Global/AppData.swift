@@ -7,7 +7,6 @@
 //
 
 import Combine
-// The reason I made this is because the application is O(1) space complexity and is light.
 
 final class AppData: ObservableObject {
     
@@ -16,7 +15,7 @@ final class AppData: ObservableObject {
     @Published var totalGamesOnSat: String = ""
     @Published var totalGamesOnSun: String = ""
     
-    @Published var pools = [Int : [Team]?]()
+    @Published var pools = [[String]?]()
     @Published var remainingTeams: Int = 0
 
 }

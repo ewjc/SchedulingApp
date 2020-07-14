@@ -11,8 +11,6 @@ import SwiftUI
 struct SelectTeamAndPoolView: View {
     
     @EnvironmentObject var appData: AppData
-
-//    @ObservedObject private var selectTeamAndPoolVM = SelectTeamAndPoolVM()
     
     private func isValid(amount: String) -> Bool {
         if let amountAsString = Int(amount) {
@@ -21,6 +19,19 @@ struct SelectTeamAndPoolView: View {
             } else {  return false }
         } else { return false }
     }
+    
+    
+//    private func canContinueFunc() -> Bool {
+//        guard appData.totalPools.isEmpty else { return false }
+//        guard appData.totalTeams.isEmpty else { return false }
+//
+//        guard let totalTeams = Int(appData.totalTeams) else { return false }
+//        guard let totalPools = Int(appData.totalPools) else { return false }
+//
+//        if totalTeams > 0 && totalTeams < 51 && totalPools > 0 && totalPools < 51 {
+//            return true
+//        } else { return false }
+//    }
     
     var body: some View {
         VStack {
@@ -38,9 +49,10 @@ struct SelectTeamAndPoolView: View {
                 Text("Continue")
                 .modifier(ButtonText())
                 .padding()
-            }
+            }.disabled(!(isValid(amount: $appData.totalTeams.wrappedValue) && isValid(amount: $appData.totalPools.wrappedValue)))
             
             }.navigationBarTitle("Choose size")
+            
         .dismissKeyboardOnTap()
     }
 }

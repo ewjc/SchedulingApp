@@ -14,7 +14,7 @@ struct ChooseScheduleView: View {
     
     private func isValid(amount: String) -> Bool {
         if let amountAsString = Int(amount) {
-            if amountAsString > 0 && amountAsString < 51 {
+            if amountAsString > 0 && amountAsString < 11 {
                 return true
             } else {  return false }
         } else { return false }
@@ -32,19 +32,32 @@ struct ChooseScheduleView: View {
                 .padding()
                 .padding(.top, -200)
             
-            NavigationLink(destination: PoolListView()) {
+            NavigationLink(destination: PoolListView().environmentObject(appData)) {
                 Text("Continue")
                     .modifier(ButtonText())
                     .padding()
-                
-            }
+            }.disabled(!(isValid(amount: $appData.totalGamesOnSat.wrappedValue) && isValid(amount: $appData.totalGamesOnSun.wrappedValue)))
             
         }.navigationBarTitle("Choose schedule")
+            
         .dismissKeyboardOnTap()
-        
     }
-    
-    
+}
+
+class ChooseScheduleVM: ObservableObject {
+
+    func updatePools() {
+        
+//        guard let numberOfPoolsAsInt = Int(appData.totalPools) else { return }
+//        var finalArray = [[String]?]()
+//
+//        for index in 0...numberOfPoolsAsInt - 1 {
+//            print("appended: \(index)")
+//            finalArray.append(nil)
+//        }
+//
+//        appData.pools = finalArray
+    }
 }
 
 struct ChooseScheduleView_Preview: PreviewProvider {

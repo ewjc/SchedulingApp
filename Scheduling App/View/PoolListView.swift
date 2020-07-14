@@ -19,6 +19,8 @@ struct TeamListView: View {
 }
 
 struct PoolListView: View {
+    
+    @EnvironmentObject var appData: AppData
 
     @State var numberOfTeamSpots = 0
     @State var poolsAvailable = [String]()
@@ -31,8 +33,8 @@ struct PoolListView: View {
         
         VStack {
             List {
-                ForEach(section.indices) { index in
-                    Section(header: Text("\(self.section[index])")) {
+                ForEach(appData.pools.indices) { index in
+                    Section(header: Text("Pool: \(index)")) {
                         if self.isExpanded[index] {
                             ForEach(self.teams.indices) { index in
                                 Text("\(self.teams[index])")
@@ -50,6 +52,9 @@ struct PoolListView: View {
                 }
             }
         }.navigationBarTitle("Make Team")
+            .onAppear {
+                print("this is the total pools: \(self.$appData.totalPools.wrappedValue)")
+        }
     }
 }
 
