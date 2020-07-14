@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095C2E3124BA7283005B1983 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C2E3024BA7283005B1983 /* Schedule.swift */; };
+		095C2E3324BA76C4005B1983 /* ChooseScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C2E3224BA76C4005B1983 /* ChooseScheduleView.swift */; };
+		095C2E3524BA96EC005B1983 /* PoolTeamListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C2E3424BA96EC005B1983 /* PoolTeamListViewModel.swift */; };
+		095C2E3824BAD221005B1983 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C2E3724BAD221005B1983 /* AppData.swift */; };
 		0985636424B8F36B003AE0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985636324B8F36B003AE0B9 /* AppDelegate.swift */; };
 		0985636624B8F36B003AE0B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985636524B8F36B003AE0B9 /* SceneDelegate.swift */; };
 		0985636824B8F36B003AE0B9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985636724B8F36B003AE0B9 /* WelcomeView.swift */; };
@@ -17,9 +21,17 @@
 		0985637A24B8FE14003AE0B9 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985637924B8FE14003AE0B9 /* ButtonView.swift */; };
 		0985637C24B903E7003AE0B9 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985637B24B903E7003AE0B9 /* ViewModifiers.swift */; };
 		0985638224B91F71003AE0B9 /* ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638124B91F71003AE0B9 /* ErrorTextField.swift */; };
+		0985638424B94B5B003AE0B9 /* PoolListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638324B94B5B003AE0B9 /* PoolListView.swift */; };
+		0985638824BA46A1003AE0B9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638724BA46A1003AE0B9 /* Team.swift */; };
+		0985638A24BA4800003AE0B9 /* Pool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638924BA4800003AE0B9 /* Pool.swift */; };
+		0985638E24BA54FB003AE0B9 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638D24BA54FB003AE0B9 /* TeamViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		095C2E3024BA7283005B1983 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		095C2E3224BA76C4005B1983 /* ChooseScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseScheduleView.swift; sourceTree = "<group>"; };
+		095C2E3424BA96EC005B1983 /* PoolTeamListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolTeamListViewModel.swift; sourceTree = "<group>"; };
+		095C2E3724BAD221005B1983 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		0985636024B8F36B003AE0B9 /* Scheduling App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scheduling App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0985636324B8F36B003AE0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0985636524B8F36B003AE0B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +44,10 @@
 		0985637924B8FE14003AE0B9 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		0985637B24B903E7003AE0B9 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		0985638124B91F71003AE0B9 /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
+		0985638324B94B5B003AE0B9 /* PoolListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolListView.swift; sourceTree = "<group>"; };
+		0985638724BA46A1003AE0B9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		0985638924BA4800003AE0B9 /* Pool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pool.swift; sourceTree = "<group>"; };
+		0985638D24BA54FB003AE0B9 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		095C2E3624BAD1FC005B1983 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				095C2E3724BAD221005B1983 /* AppData.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		0985635724B8F36B003AE0B9 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +88,7 @@
 		0985636224B8F36B003AE0B9 /* Scheduling App */ = {
 			isa = PBXGroup;
 			children = (
+				095C2E3624BAD1FC005B1983 /* Global */,
 				0985637E24B9163F003AE0B9 /* Model */,
 				0985637D24B9163A003AE0B9 /* View */,
 				0985637F24B91644003AE0B9 /* ViewModel */,
@@ -91,7 +116,9 @@
 			children = (
 				0985638024B91653003AE0B9 /* ViewModifiers */,
 				0985636724B8F36B003AE0B9 /* WelcomeView.swift */,
+				0985638324B94B5B003AE0B9 /* PoolListView.swift */,
 				0985637724B8FC1F003AE0B9 /* SelectTeamAndPoolView.swift */,
+				095C2E3224BA76C4005B1983 /* ChooseScheduleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +126,9 @@
 		0985637E24B9163F003AE0B9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0985638724BA46A1003AE0B9 /* Team.swift */,
+				0985638924BA4800003AE0B9 /* Pool.swift */,
+				095C2E3024BA7283005B1983 /* Schedule.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +136,8 @@
 		0985637F24B91644003AE0B9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0985638D24BA54FB003AE0B9 /* TeamViewModel.swift */,
+				095C2E3424BA96EC005B1983 /* PoolTeamListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -191,12 +223,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0985636424B8F36B003AE0B9 /* AppDelegate.swift in Sources */,
+				0985638E24BA54FB003AE0B9 /* TeamViewModel.swift in Sources */,
 				0985637824B8FC1F003AE0B9 /* SelectTeamAndPoolView.swift in Sources */,
 				0985638224B91F71003AE0B9 /* ErrorTextField.swift in Sources */,
+				095C2E3324BA76C4005B1983 /* ChooseScheduleView.swift in Sources */,
 				0985637A24B8FE14003AE0B9 /* ButtonView.swift in Sources */,
 				0985637C24B903E7003AE0B9 /* ViewModifiers.swift in Sources */,
+				0985638424B94B5B003AE0B9 /* PoolListView.swift in Sources */,
+				095C2E3824BAD221005B1983 /* AppData.swift in Sources */,
+				095C2E3524BA96EC005B1983 /* PoolTeamListViewModel.swift in Sources */,
+				0985638824BA46A1003AE0B9 /* Team.swift in Sources */,
 				0985636624B8F36B003AE0B9 /* SceneDelegate.swift in Sources */,
 				0985636824B8F36B003AE0B9 /* WelcomeView.swift in Sources */,
+				095C2E3124BA7283005B1983 /* Schedule.swift in Sources */,
+				0985638A24BA4800003AE0B9 /* Pool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

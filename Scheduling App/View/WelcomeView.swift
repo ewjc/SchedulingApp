@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    
+    @EnvironmentObject var appData: AppData
+    
     var body: some View {
         VStack {
             Spacer()
@@ -19,7 +22,7 @@ struct WelcomeView: View {
                 .padding(.top, 15)
             Spacer()
             Spacer()
-            NavigationLink(destination: SelectTeamAndPoolView()) {
+            NavigationLink(destination: SelectTeamAndPoolView().environmentObject(appData)) {
                 Text("Continue")
                 .modifier(ButtonText())
                 .padding()
