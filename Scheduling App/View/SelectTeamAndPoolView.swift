@@ -41,6 +41,7 @@ struct SelectTeamAndPoolView: View {
             }
             
             }.navigationBarTitle("Choose size")
+        .dismissKeyboardOnTap()
     }
 }
 

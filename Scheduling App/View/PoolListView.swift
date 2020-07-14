@@ -18,8 +18,6 @@ struct TeamListView: View {
     }
 }
 
-
-
 struct PoolListView: View {
 
     @State var numberOfTeamSpots = 0

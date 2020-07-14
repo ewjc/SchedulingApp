@@ -40,7 +40,7 @@ struct ChooseScheduleView: View {
             }
             
         }.navigationBarTitle("Choose schedule")
-        
+        .dismissKeyboardOnTap()
         
     }
     
