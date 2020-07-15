@@ -65,12 +65,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		095C2E3624BAD1FC005B1983 /* Global */ = {
+		095C2E3624BAD1FC005B1983 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				095C2E3724BAD221005B1983 /* AppData.swift */,
 			);
-			path = Global;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		0985635724B8F36B003AE0B9 = {
@@ -92,7 +92,7 @@
 		0985636224B8F36B003AE0B9 /* Scheduling App */ = {
 			isa = PBXGroup;
 			children = (
-				095C2E3624BAD1FC005B1983 /* Global */,
+				095C2E3624BAD1FC005B1983 /* Data */,
 				0985637E24B9163F003AE0B9 /* Model */,
 				0985637D24B9163A003AE0B9 /* View */,
 				0985637F24B91644003AE0B9 /* ViewModel */,
@@ -385,6 +385,7 @@
 				DEVELOPMENT_TEAM = 37UFE54W7P;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Scheduling App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,6 +406,7 @@
 				DEVELOPMENT_TEAM = 37UFE54W7P;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Scheduling App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

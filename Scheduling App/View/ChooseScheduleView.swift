@@ -24,13 +24,14 @@ struct ChooseScheduleView: View {
         VStack {
             Text("You can edit the amount of games on saturday and sunday.")
                 .modifier(BodyText())
+                .padding(5)
             
             ErrorTextField(title: "Saturday", placeHolder: "Maxmium of 10", helperText: "games on Saturday", text: $appData.totalGamesOnSat, keyboardType: .numberPad, isValid: isValid(amount:))
                 .padding()
             
             ErrorTextField(title: "Sunday", placeHolder: "Maxmium of 10", helperText: "games on Sunday", text: $appData.totalGamesOnSun, keyboardType: .numberPad, isValid: isValid(amount:))
                 .padding()
-                .padding(.top, -200)
+                .padding(.top, -100)
             
             NavigationLink(destination: PoolListView().environmentObject(appData)) {
                 Text("Continue")

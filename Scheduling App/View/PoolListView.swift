@@ -15,7 +15,7 @@ struct PoolListView: View {
     @State var showingAddTeamView = false
     @State var numberOfTeamSpots = 0
     @State var pools = [Int]()
-    @State var isExpanded = [false, false ,false, false, false]
+    @State var isExpanded = [Bool]()
     
     var teams = ["gold", "blue", "red"]
     
@@ -36,7 +36,6 @@ struct PoolListView: View {
                         }
                     }.onTapGesture {
                         withAnimation{
-                            print("this is the expanded index: \(index)")
                             self.isExpanded[index].toggle()
                             print("this is exapnded: \(self.isExpanded[index])")
                         }
@@ -56,13 +55,13 @@ struct PoolListView: View {
                 }) {
                     Text("Add Team")
                 }.sheet(isPresented: $showingAddTeamView) {
-                    AddTeamView()
-                }
+                    AddTeamView().environmentObject(self.appData)
+                    }
                 .onAppear(perform: {
                     guard let totalPools = Int(self.$appData.totalPools.wrappedValue) else { return }
                     
                     self.pools = Array(repeating: 0, count: totalPools)
-                    self.isExpanded = Array(repeating: false, count: totalPools)
+                    self.isExpanded = Array(repeating: true, count: totalPools)
                 })
         )
     }

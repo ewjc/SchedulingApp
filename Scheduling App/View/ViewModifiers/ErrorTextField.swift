@@ -54,8 +54,6 @@ struct ErrorTextField: View {
                     .padding(.top, -10)
             }
         }
-       
-        
     }
 }
 
