@@ -11,16 +11,11 @@ import SwiftUI
 struct AddTeamView: View {
     
     @EnvironmentObject var appData: AppData
-    
+    @Environment(\.presentationMode) var presentationMode
+
     @State private var isExpanded = false
     @State private var selectedNum = 1
     @State private var teamName = ""
-    
-    private func isValid(teamName: String) -> Bool {
-        if teamName.count < 0 && teamName.count > 20 {
-            return false
-        } else { return true }
-    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -45,7 +40,7 @@ struct AddTeamView: View {
                                     self.isExpanded.toggle()
                                 }
                             }
-                    }
+                    }.disabled(poolIsValid())
                 }
             }.accentColor(.white)
             .font(.title2)
@@ -53,29 +48,39 @@ struct AddTeamView: View {
             .padding(.all)
             .background(Color.blue)
             .cornerRadius(8)
-            
-            
+
             ErrorTextField(title: "Team", placeHolder: "Enter a team name", helperText: "", text: $teamName, keyboardType: .asciiCapable, isValid: isValid(teamName:))
                 .padding()
-            
-
-
-            
-            Spacer()
-            Spacer()
             Spacer()
             
         }.padding(.all)
         
-        NavigationLink(destination: ChooseScheduleView().environmentObject(appData)) {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+            $appData.pools.wrappedValue[selectedNum - 1].append(TeamVM(teamName: $teamName.wrappedValue))
+        }) {
             Text("Continue")
-            .modifier(ButtonText())
-            .padding()
-        }.disabled(isValid(teamName: $teamName.wrappedValue))
-        
+                .modifier(ButtonText())
+                .padding()
+        }.disabled(!isValid(teamName: $teamName.wrappedValue))
+
     }
 }
 
+// Presenter Logic
+extension AddTeamView {
+    private func isValid(teamName: String) -> Bool {
+        return !teamName.isEmpty
+    }
+    
+    private func poolIsValid() -> Bool {
+        guard let totalTeams = Int($appData.totalTeams.wrappedValue) else { return false }
+        
+        if totalTeams < $appData.pools.wrappedValue[selectedNum - 1].count {
+            return false
+        } else { return true }
+    }
+}
 
 struct AddTeamView_Previews: PreviewProvider {
     static var previews: some View {

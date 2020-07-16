@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		095C2E3124BA7283005B1983 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C2E3024BA7283005B1983 /* Schedule.swift */; };
 		095C2E3324BA76C4005B1983 /* ChooseScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C2E3224BA76C4005B1983 /* ChooseScheduleView.swift */; };
-		095C2E3524BA96EC005B1983 /* PoolTeamListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C2E3424BA96EC005B1983 /* PoolTeamListViewModel.swift */; };
+		095C2E3524BA96EC005B1983 /* PoolTeamListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C2E3424BA96EC005B1983 /* PoolTeamListVM.swift */; };
 		095C2E3824BAD221005B1983 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C2E3724BAD221005B1983 /* AppData.swift */; };
 		0985636424B8F36B003AE0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985636324B8F36B003AE0B9 /* AppDelegate.swift */; };
 		0985636624B8F36B003AE0B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985636524B8F36B003AE0B9 /* SceneDelegate.swift */; };
@@ -23,16 +23,16 @@
 		0985638224B91F71003AE0B9 /* ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638124B91F71003AE0B9 /* ErrorTextField.swift */; };
 		0985638424B94B5B003AE0B9 /* PoolListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638324B94B5B003AE0B9 /* PoolListView.swift */; };
 		0985638824BA46A1003AE0B9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638724BA46A1003AE0B9 /* Team.swift */; };
-		0985638A24BA4800003AE0B9 /* Pool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638924BA4800003AE0B9 /* Pool.swift */; };
-		0985638E24BA54FB003AE0B9 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638D24BA54FB003AE0B9 /* TeamViewModel.swift */; };
+		0985638E24BA54FB003AE0B9 /* TeamVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0985638D24BA54FB003AE0B9 /* TeamVM.swift */; };
 		099749C224BE37BC0008837C /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099749C124BE37BC0008837C /* ScheduleView.swift */; };
 		099749C424BE37CB0008837C /* AddTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099749C324BE37CB0008837C /* AddTeamView.swift */; };
+		09FAECF024BFC6880071A328 /* SelectTeamAndPoolVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FAECEF24BFC6880071A328 /* SelectTeamAndPoolVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		095C2E3024BA7283005B1983 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		095C2E3224BA76C4005B1983 /* ChooseScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseScheduleView.swift; sourceTree = "<group>"; };
-		095C2E3424BA96EC005B1983 /* PoolTeamListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolTeamListViewModel.swift; sourceTree = "<group>"; };
+		095C2E3424BA96EC005B1983 /* PoolTeamListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolTeamListVM.swift; sourceTree = "<group>"; };
 		095C2E3724BAD221005B1983 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		0985636024B8F36B003AE0B9 /* Scheduling App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scheduling App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0985636324B8F36B003AE0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,10 +48,10 @@
 		0985638124B91F71003AE0B9 /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
 		0985638324B94B5B003AE0B9 /* PoolListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolListView.swift; sourceTree = "<group>"; };
 		0985638724BA46A1003AE0B9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		0985638924BA4800003AE0B9 /* Pool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pool.swift; sourceTree = "<group>"; };
-		0985638D24BA54FB003AE0B9 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		0985638D24BA54FB003AE0B9 /* TeamVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamVM.swift; sourceTree = "<group>"; };
 		099749C124BE37BC0008837C /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		099749C324BE37CB0008837C /* AddTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTeamView.swift; sourceTree = "<group>"; };
+		09FAECEF24BFC6880071A328 /* SelectTeamAndPoolVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamAndPoolVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				0985638724BA46A1003AE0B9 /* Team.swift */,
-				0985638924BA4800003AE0B9 /* Pool.swift */,
 				095C2E3024BA7283005B1983 /* Schedule.swift */,
 			);
 			path = Model;
@@ -142,8 +141,9 @@
 		0985637F24B91644003AE0B9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0985638D24BA54FB003AE0B9 /* TeamViewModel.swift */,
-				095C2E3424BA96EC005B1983 /* PoolTeamListViewModel.swift */,
+				0985638D24BA54FB003AE0B9 /* TeamVM.swift */,
+				095C2E3424BA96EC005B1983 /* PoolTeamListVM.swift */,
+				09FAECEF24BFC6880071A328 /* SelectTeamAndPoolVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0985636424B8F36B003AE0B9 /* AppDelegate.swift in Sources */,
-				0985638E24BA54FB003AE0B9 /* TeamViewModel.swift in Sources */,
+				0985638E24BA54FB003AE0B9 /* TeamVM.swift in Sources */,
 				0985637824B8FC1F003AE0B9 /* SelectTeamAndPoolView.swift in Sources */,
 				0985638224B91F71003AE0B9 /* ErrorTextField.swift in Sources */,
 				099749C424BE37CB0008837C /* AddTeamView.swift in Sources */,
@@ -239,12 +239,12 @@
 				0985637C24B903E7003AE0B9 /* ViewModifiers.swift in Sources */,
 				0985638424B94B5B003AE0B9 /* PoolListView.swift in Sources */,
 				095C2E3824BAD221005B1983 /* AppData.swift in Sources */,
-				095C2E3524BA96EC005B1983 /* PoolTeamListViewModel.swift in Sources */,
+				095C2E3524BA96EC005B1983 /* PoolTeamListVM.swift in Sources */,
+				09FAECF024BFC6880071A328 /* SelectTeamAndPoolVM.swift in Sources */,
 				0985638824BA46A1003AE0B9 /* Team.swift in Sources */,
 				0985636624B8F36B003AE0B9 /* SceneDelegate.swift in Sources */,
 				0985636824B8F36B003AE0B9 /* WelcomeView.swift in Sources */,
 				095C2E3124BA7283005B1983 /* Schedule.swift in Sources */,
-				0985638A24BA4800003AE0B9 /* Pool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

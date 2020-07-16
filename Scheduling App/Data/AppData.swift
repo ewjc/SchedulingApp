@@ -14,8 +14,6 @@ final class AppData: ObservableObject {
     @Published var totalPools: String = ""
     @Published var totalGamesOnSat: String = ""
     @Published var totalGamesOnSun: String = ""
+    @Published var pools = [[TeamVM?]]()
     
-    @Published var pools = [[String]?]()
-    @Published var remainingTeams: Int = 0
-
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct ChooseScheduleView: View {
     
     @EnvironmentObject var appData: AppData
-    
+        
     private func isValid(amount: String) -> Bool {
         if let amountAsString = Int(amount) {
             if amountAsString > 0 && amountAsString < 11 {
@@ -48,16 +48,7 @@ struct ChooseScheduleView: View {
 class ChooseScheduleVM: ObservableObject {
 
     func updatePools() {
-        
-//        guard let numberOfPoolsAsInt = Int(appData.totalPools) else { return }
-//        var finalArray = [[String]?]()
-//
-//        for index in 0...numberOfPoolsAsInt - 1 {
-//            print("appended: \(index)")
-//            finalArray.append(nil)
-//        }
-//
-//        appData.pools = finalArray
+
     }
 }
 

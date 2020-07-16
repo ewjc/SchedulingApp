@@ -1,5 +1,5 @@
 //
-//  Pool.swift
+//  TeamListViewModel.swift
 //  Scheduling App
 //
 //  Created by Eric Wong on 7/11/20.
@@ -8,9 +8,14 @@
 
 import Foundation
 
-struct Pool {
 
-    let poolNumber: Int
-    var teams: [Team]?
+struct TeamVM: Identifiable {
+    
+    let id = UUID()
+    var teamName: String
+    var teams: [TeamVM]? = nil
     
 }
+
+
+

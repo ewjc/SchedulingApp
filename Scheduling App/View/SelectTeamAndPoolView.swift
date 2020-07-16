@@ -12,15 +12,8 @@ import Combine
 struct SelectTeamAndPoolView: View {
     
     @EnvironmentObject var appData: AppData
-    
-    private func isValid(amount: String) -> Bool {
-        if let amountAsString = Int(amount) {
-            if amountAsString > 0 && amountAsString < 9 {
-                return true
-            } else {  return false }
-        } else { return false }
-    }
-    
+    @ObservedObject private var selectTeamandPoolVM = SelectTeamAndPoolVM()
+
     var body: some View {
         VStack {
             Text("You can edit the team and pool size to fit your needs.")
@@ -36,14 +29,35 @@ struct SelectTeamAndPoolView: View {
             
             NavigationLink(destination: ChooseScheduleView().environmentObject(appData)) {
                 Text("Continue")
-                .modifier(ButtonText())
-                .padding()
+                    .modifier(ButtonText())
+                    .padding()
+                
             }.disabled(!(isValid(amount: $appData.totalTeams.wrappedValue) && isValid(amount: $appData.totalPools.wrappedValue)))
             
-            }.navigationBarTitle("Choose size")
-            
+        }.navigationBarTitle("Choose size")
         .dismissKeyboardOnTap()
+        .onDisappear {
+            DispatchQueue.main.async {
+                selectTeamandPoolVM.totalPoolAmount = $appData.totalPools.wrappedValue
+                selectTeamandPoolVM.setupPools()
+                print("this is the pool: \(selectTeamandPoolVM.pool)")
+                appData.pools = selectTeamandPoolVM.pool
+            }
+            
+        }
     }
+}
+
+// Presenter Logic
+extension SelectTeamAndPoolView {
+    private func isValid(amount: String) -> Bool {
+        if let amountAsString = Int(amount) {
+            if amountAsString > 0 && amountAsString < 9 {
+                return true
+            } else {  return false }
+        } else { return false }
+    }
+    
 }
 
 struct SelectTeamAndPoolView_Previews: PreviewProvider {
