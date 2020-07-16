@@ -9,13 +9,14 @@
 import Foundation
 
 
-struct TeamVM: Identifiable {
+struct PoolTeamListVM: Identifiable {
     
     let id = UUID()
     var teamName: String
-    var teams: [TeamVM]? = nil
+    var teams: [PoolTeamListVM]? = nil
     
 }
+
 
 
 
